@@ -1,0 +1,6 @@
+nc: 1
+names:
+  0: udarnik
+path: .
+train: dataset\train\images
+val: dataset\val\images

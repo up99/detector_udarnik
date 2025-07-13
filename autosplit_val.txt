@@ -1,0 +1,13 @@
+./dataset/Udarnik_0011.jpg
+./dataset/Udarnik_0017.jpg
+./dataset/Udarnik_0018.jpg
+./dataset/Udarnik_0020.jpg
+./dataset/Udarnik_0023.jpg
+./dataset/Udarnik_0029.jpg
+./dataset/Udarnik_0030.jpg
+./dataset/Udarnik_0032.jpg
+./dataset/Udarnik_0043.jpg
+./dataset/Udarnik_0046.jpg
+./dataset/Udarnik_0050.jpg
+./dataset/Udarnik_0056.jpg
+./dataset/Udarnik_0063.jpg
