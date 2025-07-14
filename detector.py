@@ -1,3 +1,5 @@
+import multiprocessing
+multiprocessing.freeze_support()
 import tkinter as tk
 from tkinter import filedialog, messagebox
 from PIL import Image, ImageTk
@@ -5,7 +7,16 @@ import cv2
 import os
 from ultralytics import YOLO
 
-model = YOLO('runs/detect/train3/weights/best.pt')
+path_to_weights = 'runs/detect/train3/weights/best.pt'
+if os.path.exists(path_to_weights):
+    pass
+else:
+    if os.path.exists('_internal' + '/' + path_to_weights): # workaround
+        path_to_weights = '_internal' + '/' + path_to_weights
+    else:
+        raise ImportError("Weights file is abscent!")
+
+model = YOLO(path_to_weights)
 
 class Counter:
     def __init__(self, root):
@@ -70,8 +81,8 @@ class Counter:
     def run_inference(self):
         if not self.current_img_path:
             return
-
-        results = model.predict(self.current_img_path, conf=0.5)
+        
+        results = model.predict(self.current_img_path, conf=0.5, device='cpu')
         result = results[0]
         amount = result.boxes.xyxy.shape[0]
         # Plot results on image

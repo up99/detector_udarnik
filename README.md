@@ -28,7 +28,7 @@ For Windows users who prefer a standalone executable:
 - Clone or download the repository.
 - Build the `.exe` file using PyInstaller:
   ```bash
-  pyinstaller detector.py --windowed --add-data "runs\detect\train3\weights\best.pt;runs\detect\train3\weights" --clean
+  pyinstaller detector.py --windowed --onedir --add-data "runs\detect\train3\weights\best.pt;.\runs\detect\train3\weights" --clean
   ```
 
 ## 📁 Notes on Resources

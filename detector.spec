@@ -5,7 +5,7 @@ a = Analysis(
     ['detector.py'],
     pathex=[],
     binaries=[],
-    datas=[('runs/detect/train/weights/best.pt', 'runs/detect/train/weights/')],
+    datas=[('runs\\detect\\train3\\weights\\best.pt', '.\\runs\\detect\\train3\\weights')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -32,7 +32,6 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=['icon\\app.ico'],
 )
 coll = COLLECT(
     exe,
