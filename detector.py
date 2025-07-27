@@ -6,8 +6,9 @@ from PIL import Image, ImageTk
 import cv2
 import os
 from ultralytics import YOLO
+# from torchvision import transforms as T
 
-path_to_weights = 'runs/detect/train3/weights/best.pt'
+path_to_weights = 'runs/detect/train_yolo5nu_augmented_75epochs/weights/best.pt'
 if os.path.exists(path_to_weights):
     pass
 else:
@@ -82,7 +83,7 @@ class Counter:
         if not self.current_img_path:
             return
         
-        results = model.predict(self.current_img_path, conf=0.5, device='cpu')
+        results = model.predict(self.current_img_path, conf=0.3, device='cpu', augment = True, iou = 0.4)
         result = results[0]
         amount = result.boxes.xyxy.shape[0]
         # Plot results on image

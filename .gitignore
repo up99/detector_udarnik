@@ -1,3 +1,13 @@
 /dist
 /build
 detector.spec
+/dataset_roboflow
+/dataset_with_spam
+/spam_dataset
+transformer_demo.py
+contour.py
+invert.py
+GeCo.pth
+/utils
+/segment_anything
+/models

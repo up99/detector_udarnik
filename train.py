@@ -1,10 +1,9 @@
 from ultralytics import YOLO
 def train_model():
-    # Load a pretrained YOLOv11 model
-    model = YOLO("runs/detect/train/weights/best.pt")
-
-    # Train the modelx
-    results = model.train(data="data.yaml", epochs=120, device='cuda', degrees=180.0, patience=50)
+    # model = YOLO("runs/detect/train3/weights/best.pt")
+    model = YOLO("yolov5nu.pt")
+    # results = model.train(data="data.yaml", epochs=120, device='cuda', degrees=180.0, patience=50, pretrained = True, augment = True)
+    results = model.train(data="data.yaml", epochs=75, device='cuda', patience=15, augment = True, dropout = 0.2, bgr=0.7)
     return results
 
 if __name__ == '__main__':

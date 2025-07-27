@@ -4,3 +4,4 @@ names:
 path: .
 train: dataset\train\images
 val: dataset\val\images
+test: dataset\test\images
